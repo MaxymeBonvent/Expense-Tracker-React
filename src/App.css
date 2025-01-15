@@ -1,0 +1,417 @@
+/* -------- PROPRIÉTÉS COMMUNES -------- */
+
+/* Corps de la page */
+body{
+  /* Fond et contour */
+  background-color: rgb(120, 120, 200);
+
+  /* Centrage */
+  margin: auto;
+}
+
+/* Racine */
+#root{
+  /* Contour */
+  border: transparent;
+}
+
+/* Conteneur principal dans la racine */
+#root #conteneur_principal{
+  /* Centrage */
+  margin: auto;
+}
+
+/* Divs dans la racine */
+#root div{
+  /* Espace externe */
+  margin: 10px 0;
+}
+
+/* Contours de toutes les divs, de la liste et du formulaire */
+div, ul, form{
+  /* Contour */
+  border: 2px solid black;
+
+  /* Centrage du texte */
+  text-align: center;
+}
+
+/* Conteneur principal */
+#conteneur_principal{
+  /* Espace interne */
+  padding: 4px;
+
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Divs et formulaire dans le Conteneur principal */
+#div_solde, #div_revenus_depenses, #div_historique, form{
+  /* Dimensions */
+  width: 90%;
+}
+
+/* Div solde */
+#div_solde{
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Texte "Votre solde" */
+#div_solde h3{
+  /* Espace externe */
+  margin-bottom: 0;
+}
+
+/* Montant du solde */
+#div_solde p{
+  /* Espace externe */
+  margin-top: 0;
+}
+
+/* Div revenus et dépenses */
+#div_revenus_depenses{
+  /* Position des éléments internes */
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Divs individuelles revenus et dépenses */
+#div_revenus, #div_depenses{
+  /* Dimensions */
+  width: 40%;
+
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Textes "Revenus" et "Dépenses" */
+#div_revenus h3, #div_depenses h3{
+  /* Espace externe */
+  margin-bottom: 0;
+}
+
+/* Montant des revenus et des dépenses */
+#montant_revenus, #montant_depenses{
+  /* Espace externe */
+  margin-top: 0;
+}
+
+/* Montant des revenus */
+#montant_revenus{
+  /* Couleur du texte */
+  color: rgb(0, 70, 0);
+}
+
+/* Montant des dépenses */
+#montant_depenses{
+  /* Couleur du texte */
+  color: rgb(180, 0, 0);
+}
+
+/* Div de l'historique des transactions */
+#div_historique{
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Boutons */
+button, input[type="submit"]{
+  /* Souris */
+  cursor: pointer;
+}
+
+/* Formulaire */
+form{
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titre du formulaire */
+fieldset{
+  /* Contour */
+  border: none;
+
+  /* Texte */
+  font-weight: bold;
+}
+
+/* Champs de saisie du formulaire */
+form input{
+  /* Espace externe */
+  margin-bottom: 10px;
+}
+
+/* Liste */
+ul{
+  /* Dimensions */
+  width: 80%;
+
+  /* Espace interne */
+  padding: 0;
+
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Éléments <li> */
+li{
+  /* Fond */
+  background-color: rgb(220, 220, 220);
+
+  /* Dimensions */
+  width: 90%;
+
+  /* Centrage du texte */
+  text-align: center;
+
+  /* Espace externe */
+  margin: 4px 0;
+
+  /* Position des éléments internes */
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* Éléments <li> de dépense */
+.dépense{
+  /* Contour droit */
+  border-right: 4px solid rgb(200, 0, 0);
+}
+
+/* Éléments <li> de revenu */
+.revenu{
+  /* Contour droit */
+  border-right: 4px solid rgb(0, 120, 0);
+}
+
+/* Boutons de suppression des transactions */
+.btn_suppr_trsc{
+  /* Fond et contour */
+  background-color: rgb(200, 0, 0);
+  border: transparent;
+
+  /* Espace externe */
+  margin-right: 8px;
+}
+
+/* -------- RESPONSIVE -------- */
+
+/* VERSION TRÈS PETITE */
+@media all and (max-width: 344px)
+{
+  /* Conteneur principal */
+  #conteneur_principal{
+    /* Dimensions */
+    width: 70%;
+  }
+
+  /* Liste */
+  ul{
+    /* Dimensions */
+    width: 90%;
+  }
+
+  /* Éléments de la liste */
+  li{
+    /* Dimensions */
+    width: 100%;
+
+    /* Taille */
+    font-size: 18px;
+  }
+
+  /* Textes */
+  p{
+    /* Taille */
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /*  Titre du formulaire */
+  fieldset{
+    /* Taille */
+    font-size: 20px;
+  }
+
+  /* Labels */
+  label{
+    /* Taille */
+    font-size: 20px;
+  }
+
+  /* Champs de saisie */
+  input{
+    /* Taille */
+    font-size: 16px;
+  }
+}
+
+/* VERSION PETITE */
+@media all and (min-width: 345px) and (max-width: 540px)
+{
+  /* Conteneur principal */
+  #conteneur_principal{
+    /* Dimensions */
+    width: 70%;
+  }
+
+  /* Liste */
+  ul{
+    /* Dimensions */
+    width: 90%;
+  }
+
+  /* Éléments de la liste */
+  li{
+    /* Dimensions */
+    width: 100%;
+
+    /* Taille */
+    font-size: 18px;
+  }
+
+  /* Textes */
+  p{
+    /* Taille */
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /*  Titre du formulaire */
+  fieldset{
+    /* Taille */
+    font-size: 20px;
+  }
+
+  /* Labels */
+  label{
+    /* Taille */
+    font-size: 20px;
+  }
+
+  /* Champs de saisie */
+  input{
+    /* Taille */
+    font-size: 16px;
+  }
+}
+
+/* VERSION MOYENNE */
+@media all and (min-width: 541px) and (max-width: 912px)
+{
+  /* Conteneur principal */
+  #conteneur_principal{
+    /* Dimensions */
+    width: 70%;
+  }
+
+  /* Liste */
+  ul{
+    /* Dimensions */
+    width: 90%;
+  }
+
+  /* Éléments de la liste */
+  li{
+    /* Dimensions */
+    width: 50%;
+
+    /* Taille */
+    font-size: 22px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Sous-titres et titre du formulaire */
+  h3, fieldset{
+    /* Taille */
+    font-size: 26px;
+  }
+
+  /* Textes */
+  p{
+    /* Taille */
+    font-size: 24px;
+  }
+
+  /* Labels */
+  label{
+    /* Taille */
+    font-size: 24px;
+  }
+
+  /* Champs de saisie */
+  input{
+    /* Taille */
+    font-size: 18px;
+  }
+}
+
+/* VERSION GRANDE */
+@media all and (min-width: 913px)
+{
+  /* Conteneur principal */
+  #conteneur_principal{
+    /* Dimensions */
+    width: 50%;
+  }
+
+  /* Liste */
+  ul{
+    /* Dimensions */
+    width: 90%;
+  }
+
+  /* Éléments de la liste */
+  li{
+    /* Dimensions */
+    width: 50%;
+
+    /* Taille */
+    font-size: 22px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Sous-titres et titre du formulaire */
+  h3, fieldset{
+    /* Taille */
+    font-size: 26px;
+  }
+
+  /* Textes */
+  p{
+    /* Taille */
+    font-size: 24px;
+  }
+
+  /* Labels */
+  label{
+    /* Taille */
+    font-size: 24px;
+  }
+
+  /* Champs de saisie */
+  input{
+    /* Taille */
+    font-size: 18px;
+  }
+}
